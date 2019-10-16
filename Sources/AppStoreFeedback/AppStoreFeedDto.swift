@@ -1,6 +1,6 @@
 import Foundation
 
-struct AppStoreFeedDto: Codable {
+public struct AppStoreFeedDto: Codable {
     internal let feed: FeedDto
     
     struct FeedDto: Codable {
