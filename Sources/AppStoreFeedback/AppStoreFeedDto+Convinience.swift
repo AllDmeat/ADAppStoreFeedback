@@ -1,10 +1,10 @@
 import Foundation
 
-extension AppStoreFeedDto {
+public extension AppStoreFeedDto {
     public var entries: [FeedDto.EntryDto] { return feed.entry }
 }
 
-extension AppStoreFeedDto.FeedDto.EntryDto {
+public extension AppStoreFeedDto.FeedDto.EntryDto {
     public var id:      String { return idDto       .label }
     public var title:   String { return titleDto    .label }
     public var content: String { return contentDto  .label }

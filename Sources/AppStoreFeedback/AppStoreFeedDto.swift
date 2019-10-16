@@ -1,12 +1,12 @@
 import Foundation
 
-struct AppStoreFeedDto: Codable {
+public struct AppStoreFeedDto: Codable {
     internal let feed: FeedDto
     
-    struct FeedDto: Codable {
+    public struct FeedDto: Codable {
         let entry: [EntryDto]
         
-        struct EntryDto: Codable {
+        public struct EntryDto: Codable {
             internal let idDto: EntryIdDto
             internal let titleDto: EntryTitleDto
             internal let contentDto: EntryContentDto
