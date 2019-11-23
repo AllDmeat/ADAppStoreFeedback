@@ -7,4 +7,8 @@ final class AppStoreFeedDtoTests: XCTestCase {
         let dto = try! JSONDecoder().decode(AppStoreFeedDto.self, from: AppStoreFeedDto.json)
         XCTAssertNotNil(dto)
     }
+    
+    static var allTests = [
+        ("DTO Is Parsed Successfully", test_dtoIsParsed),
+    ]
 }
