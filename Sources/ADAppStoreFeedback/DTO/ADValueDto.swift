@@ -1,3 +1,3 @@
 import Foundation
 
-public struct ADValueDto:  Codable { let label: String }
+internal struct ADValueDto:  Codable { let label: String }

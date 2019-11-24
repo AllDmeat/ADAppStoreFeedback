@@ -1,5 +1,5 @@
 import Foundation
 
-public class ADFeedDto: Codable {
-    let entry: [ADEntryDto]
+internal class ADFeedDto: Codable {
+    let entry: [ADAppStoreFeedDto.ADEntryDto]
 }
