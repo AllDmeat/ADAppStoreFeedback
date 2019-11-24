@@ -161,8 +161,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fastlane (~> 2.137)
-  xcov (~> 1.7)
+  fastlane
+  xcov
 
 BUNDLED WITH
    2.0.2
