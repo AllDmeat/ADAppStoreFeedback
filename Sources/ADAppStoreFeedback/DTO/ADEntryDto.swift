@@ -2,10 +2,10 @@ import Foundation
 
 extension ADAppStoreFeedDto {
     public class ADEntryDto: Codable {
-        internal let id:         String
-        internal let title:      String
-        internal let content:    String
-        internal let rating:     String
+        public let id:         String
+        public let title:      String
+        public let content:    String
+        public let rating:     String
         
         private enum CodingKeys: String, CodingKey {
             case id
