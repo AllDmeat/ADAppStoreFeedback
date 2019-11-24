@@ -1,7 +1,7 @@
 import Foundation
-@testable import AppStoreFeedback
+@testable import ADAppStoreFeedback
 
-internal extension AppStoreFeedDto {
+internal extension ADAppStoreFeedDto {
     static let json = Data("""
 {
   "feed": {

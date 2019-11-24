@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppStoreFeedback
+@testable import ADAppStoreFeedback
 
 final class URLTests: XCTestCase {
     
@@ -9,8 +9,4 @@ final class URLTests: XCTestCase {
         let url = URL.appStoreFeed(for: appId, in: countryCode)
         XCTAssertEqual(url.absoluteString, "https://itunes.apple.com/us/rss/customerreviews/id=640199958/sortBy=mostRecent/json")
     }
-    
-    static var allTests = [
-        ("URL Is Constructed Successfully", test_urlIsConstructed),
-    ]
 }

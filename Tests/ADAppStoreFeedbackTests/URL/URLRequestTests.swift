@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppStoreFeedback
+@testable import ADAppStoreFeedback
 
 final class URLRequestTests: XCTestCase {
     
@@ -12,8 +12,4 @@ final class URLRequestTests: XCTestCase {
         let urlRequest = URLRequest.appStoreFeed(for: appId, in: countryCode)
         XCTAssertEqual(urlRequest.url?.absoluteString, "https://itunes.apple.com/us/rss/customerreviews/id=640199958/sortBy=mostRecent/json")
     }
-    
-    static var allTests = [
-        ("DTO Is Parsed Successfully", test_urlRequestIsConstructed),
-    ]
 }
