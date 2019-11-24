@@ -68,3 +68,8 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 .swiftpm/
+
+vendor
+test_output
+xcov_report
+*.xcodeproj
