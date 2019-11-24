@@ -1,25 +1,21 @@
 import Foundation
 
-public struct ADAppStoreFeedDto: Codable {
-    internal let feed: FeedDto
+public class ADAppStoreFeedDto: Codable {
+    internal let entries: [ADEntryDto]
     
-    public struct FeedDto: Codable {
-        let entry: [EntryDto]
+    private enum CodingKeys: String, CodingKey {
+        case feed
+    }
+    
+    public required init(from decoder: Decoder) throws {
+        let container   = try decoder.container(keyedBy: CodingKeys.self)
         
-        public struct EntryDto: Codable {
-            internal let idDto:         ValueDto
-            internal let titleDto:      ValueDto
-            internal let contentDto:    ValueDto
-            internal let ratingDto:     ValueDto
-            
-            private enum CodingKeys: String, CodingKey {
-                case idDto      = "id"
-                case titleDto   = "title"
-                case contentDto = "content"
-                case ratingDto  = "im:rating"
-            }
-            
-            public struct ValueDto:  Codable { let label: String }
-        }
+        let feed = try container.decode(ADFeedDto.self, forKey: .feed)
+        
+        self.entries = feed.entry
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        fatalError("Not implemented")
     }
 }
