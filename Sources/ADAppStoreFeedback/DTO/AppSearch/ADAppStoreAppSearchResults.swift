@@ -1,7 +1,7 @@
 import Foundation
 
 public struct ADAppStoreAppSearchResults: Codable {
-    let results: [ADAppStoreAppSearchResult]
+    public let results: [ADAppStoreAppSearchResult]
     
     public struct ADAppStoreAppSearchResult: Codable {
         let artworkUrl60: String
