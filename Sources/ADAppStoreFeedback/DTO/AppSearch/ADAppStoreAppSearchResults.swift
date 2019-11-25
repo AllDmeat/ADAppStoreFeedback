@@ -4,10 +4,10 @@ public struct ADAppStoreAppSearchResults: Codable {
     public let results: [ADAppStoreAppSearchResult]
     
     public struct ADAppStoreAppSearchResult: Codable {
-        let artworkUrl60: String
-        let artworkUrl100: String
-        let artworkUrl512: String
-        let trackName: String
-        let trackId: Int
+        public let artworkUrl60: String
+        public let artworkUrl100: String
+        public let artworkUrl512: String
+        public let trackName: String
+        public let trackId: Int
     }
 }
