@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ADAppStoreAppSearchResults: Codable {
+public struct ADAppStoreAppSearch: Codable {
     public let results: [ADAppStoreAppSearchResult]
     
     public struct ADAppStoreAppSearchResult: Codable {

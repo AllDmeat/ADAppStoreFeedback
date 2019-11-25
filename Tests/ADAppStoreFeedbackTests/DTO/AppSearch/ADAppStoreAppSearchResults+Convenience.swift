@@ -1,7 +1,7 @@
 import Foundation
 @testable import ADAppStoreFeedback
 
-internal extension ADAppStoreAppSearchResults {
+internal extension ADAppStoreAppSearch {
     static let json = Data("""
 {
   "resultCount": 1,
