@@ -6,6 +6,22 @@ public extension URL {
     }
     
     static func searchResults(for appId: Int) -> URL? {
-        return URL(string: "https://itunes.apple.com/lookup?id=\(appId)")
+        let queryItems = [
+            URLQueryItem(name: "id", value: String(appId)),
+        ]
+        var components = URLComponents(string: "https://itunes.apple.com/lookup")
+        components?.queryItems = queryItems
+        return components?.url
+    }
+    
+    static func searchResults(for appName: String) -> URL? {
+        let queryItems = [
+            URLQueryItem(name: "entity", value: "software"),
+            URLQueryItem(name: "term", value: appName),
+        ]
+        
+        var components = URLComponents(string: "http://itunes.apple.com/search")
+        components?.queryItems = queryItems
+        return components?.url
     }
 }

@@ -11,4 +11,8 @@ public extension URLRequest {
         return URLRequest(url: url)
     }
     
+    static func searchResults(for appName: String) -> URLRequest? {
+        guard let url = URL.searchResults(for: appName) else { return nil }
+        return URLRequest(url: url)
+    }
 }
